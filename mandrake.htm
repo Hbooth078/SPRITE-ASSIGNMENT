@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mandrake</title>
-    <!-- Link to the external CSS file for styling --><link rel="stylesheet" href="m-style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mandrake — Sprite Animation F2025</title>
+  <link rel="stylesheet" href="m-style.css" />
 </head>
 <body>
+  <header id="page-header" role="banner">
+    <div class="header-inner">
+      <h1>Hailee — Sprite Animation F2025</h1>
+    </div>
+  </header>
 
+  <main class="site-main">
     <div class="container">
-        
-        <div class="description-box">
-            <p>
-                <strong>Animated Turnit Sprite Effect!</strong><br>
-                This animation uses a "sprite sheet" of a Turnip frames.<br>
-                The JavaScript code cycles through these frames,<br> drawing a
-                different part of the image to the canvas very quickly.<br>
-                Notice how the Turnip Grows and blinks, creating a dynamic effect.
-            </p>
+      <aside class="description-box" aria-hidden="false">
+        <p>
+          <strong>Animated Turnip Sprite Effect!</strong><br />
+          This animation uses a sprite sheet of Turnip/Mandrake frames.<br />
+          The JavaScript cycles through frames and draws them to the canvas.<br />
+          Notice how the Turnip grows, blinks, and floats for a lively effect.
+        </p>
+      </aside>
+
+      <section id="animation-area" aria-label="Animation area">
+        <!-- Hidden image used as the sprite source for the canvas -->
+        <img id="mandrake" src="https://www.frankslaboratory.co.uk/downloads/105/mandrake.png" alt="Mandrake sprite sheet" style="display:none" />
+
+        <div id="controls" aria-label="Animation controls">
+          <p>Play animation:</p>
+          <label><input type="radio" name="animation" id="all" checked /> <span>All</span></label>
+          <label><input type="radio" name="animation" id="grow" /> <span>Grow</span></label>
+          <label><input type="radio" name="animation" id="wink" /> <span>Wink</span></label>
+          <label><input type="radio" name="animation" id="float" /> <span>Float</span></label>
+          <label><input type="radio" name="animation" id="hide" /> <span>Hide</span></label>
         </div>
 
-        <!-- This is our canvas element where the fire animation will be drawn. -->
-        
-<img id="mandrake" src="https://www.frankslaboratory.co.uk/downloads/105/mandrake.png">
-<div id="container">
-  <div id="controls">
-    
-     <p>Play animation:</p>
-    <input type="radio" name="animation" id="all" checked />
-    <label for="all">All</label><br>
-    <input type="radio" name="animation" id="grow" />
-    <label for="grow">Grow</label>
-    <input type="radio" name="animation" id="wink" />
-    <label for="wink">Wink</label>
-    <input type="radio" name="animation" id="float" />
-    <label for="float">Float</label>
-    <input type="radio" name="animation" id="hide" />
-    <label for="hide">Hide</label>
+        <div class="canvas-wrap">
+          <canvas id="canvas1" aria-label="Mandrake animation canvas"></canvas>
+        </div>
+      </section>
     </div>
-    <canvas id="canvas1"></canvas>
-</div>
-</div>
-    <!-- 
-        Link to the external JavaScript file.
-        The 'defer' attribute ensures the HTML is fully loaded before the script runs.
-    --><script src="m-script.js" defer></script>
+  </main>
+
+  <script src="m-script.js" defer></script>
 </body>
 </html>
